@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #countLabel{
+            font-size: 10em;
+            text-align: center;
+            font-family: helvetica;
+            display: block;
+        }
+        #btnContainer{
+            text-align: center;
+        }
+        .buttons{
+            padding: 10px 20px;
+            font-size: 1.5em;
+            color: white;
+            background-color: hsl(214, 100%, 74%);
+            transition: background-color 0.25s;
+            cursor: pointer;
+        }
+        .buttons:hover{
+            background-color: hsl(214, 100%, 56%);
+        }
+    </style>
+</head>
+<body>
+    <label id="countLabel">0</label>
+    <div id="btnContainer">
+        <button id="decreaseBtn"class="buttons">Decrease</button>
+        <button id="increaseBtn"class="buttons">Increase</button>
+        <button id="resetBtn"class="buttons">Reset</button>
+    </div>
+    <script>
+        const decreaseBtn = document.getElementById("decreaseBtn");
+        const increaseBtn = document.getElementById("increaseBtn");
+        const countLabel = document.getElementById("countLabel");
+        const resetBtn = document.getElementById("resetBtn");
+        let count = 0;
+        increaseBtn.onclick = function() {
+            count++;
+            countLabel.textContent = count;
+        };
+        decreaseBtn.onclick = function() {
+          count--;
+          countLabel.textContent =count;  
+        };
+        resetBtn.onclick=function(){
+            count = 0;
+            countLabel.textContent = 0;
+        };
+    </script>
+</body>
+</html>
