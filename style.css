@@ -1,0 +1,11 @@
+.secondView{
+    display: none;
+    text-align: center;
+    box-shadow: 2px 2px 0px 2px rgb(233, 232, 232);
+    width: 600px;
+    padding: 20px 10px;
+    transition: ease-in-out 4s;
+}
+.firstView{
+    display: block;
+}
